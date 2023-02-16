@@ -17,6 +17,9 @@
 # represent employees as a class instance
 
 class Employee
+  attr_reader :first_name, :last_name, :active
+  attr_writer :active
+
   def initialize(input_first_name, input_last_name, input_salary, input_active)
     @first_name = input_first_name
     @last_name = input_last_name
@@ -32,21 +35,21 @@ class Employee
     @salary = 1.05 * @salary
   end
 
-  def first_name
-    @first_name
-  end
+  # def first_name
+  #   @first_name
+  # end
 
-  def last_name
-    @last_name
-  end
+  # def last_name
+  #   @last_name
+  # end
 
-  def active
-    @active
-  end
+  # def active
+  #   @active
+  # end
 
-  def active=(input_active)
-    @active = input_active
-  end
+  # def active=(input_active)
+  #   @active = input_active
+  # end
 end
 
 employee1 = Employee.new("Majora", "Carter", 80000, true)
