@@ -43,6 +43,10 @@ class Employee
   def active
     @active
   end
+
+  def active=(input_active)
+    @active = input_active
+  end
 end
 
 employee1 = Employee.new("Majora", "Carter", 80000, true)
@@ -53,4 +57,6 @@ employee2.give_annual_raise
 employee2.print_info
 p employee1.first_name
 p employee1.last_name
+p employee1.active
+employee1.active = false
 p employee1.active
