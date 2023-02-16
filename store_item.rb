@@ -13,6 +13,8 @@
 # represent store items as a class instance
 
 class Car
+  attr_reader :color, :price, :brand
+
   def initialize(input_color, input_price, input_brand)
     @color = input_color
     @price = input_price
@@ -20,8 +22,20 @@ class Car
   end
 
   def print_info
-    puts "My #{@brand} car is #{@color} and it's #{@price} dollars."
+    puts "My #{brand} car is #{color} and it's #{price} dollars."
   end
+
+  # def brand
+  #   @brand
+  # end
+
+  # def color
+  #   @color
+  # end
+
+  # def price
+  #   @price
+  # end
 end
 
 car1 = Car.new("red", 20000, "Honda")
