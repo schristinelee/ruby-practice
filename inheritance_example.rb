@@ -18,12 +18,24 @@ class Vehicle
 end
 
 class Car < Vehicle
+  def initialize
+    super
+    @make = "Honda"
+    @model = "Civic"
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 class Bike < Vehicle
+  def initialize
+    super
+    @type = "Mountain"
+    @weight = 25
+  end
+
   def ring_bell
     puts "Ring ring!"
   end
