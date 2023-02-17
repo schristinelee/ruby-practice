@@ -43,6 +43,13 @@ class Manager < Employee
       employee.give_annual_raise
     end
   end
+
+  def fire_all_employees
+    puts "ran out of money! sorry :("
+    @employees.each do |employee|
+      employee.active = false
+    end
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -50,4 +57,6 @@ manager.print_info
 manager.send_report
 pp manager.employees
 manager.give_all_raises
+pp manager.employees
+manager.fire_all_employees
 pp manager.employees
