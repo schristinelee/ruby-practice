@@ -34,32 +34,21 @@ class Employee
   def give_annual_raise
     @salary = 1.05 * @salary
   end
-
-  # def first_name
-  #   @first_name
-  # end
-
-  # def last_name
-  #   @last_name
-  # end
-
-  # def active
-  #   @active
-  # end
-
-  # def active=(input_active)
-  #   @active = input_active
-  # end
 end
 
 employee1 = Employee.new({ first_name: "Majora", last_name: "Carter", salary: 80000, active: true })
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 employee1.print_info
 employee2.print_info
-employee2.give_annual_raise
-employee2.print_info
-p employee1.first_name
-p employee1.last_name
-p employee1.active
-employee1.active = false
-p employee1.active
+
+class Manager < Employee
+  def send_report
+    puts "sending email..."
+    #use email sending library
+    puts "email sent!"
+  end
+end
+
+manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true)
+manager.print_info
+manager.send_report
